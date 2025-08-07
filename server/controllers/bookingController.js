@@ -1,5 +1,5 @@
-import Booking from "../models/Booking. js"
-import Room from ", ../models/Room.js";
+import Booking from "../models/Booking.js"
+import Room from "../models/Room.js";
 import Hotel from "../models/Hotel.js";
 
 
