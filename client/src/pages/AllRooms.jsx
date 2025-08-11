@@ -4,13 +4,8 @@
 // // import StarRating from '../components/StarRating'; 
 
 // // const AllRooms = () => {
-
-
 // //      const navigate=useNavigate();
-
-
 // //   return (
-    
 // //        <div className='flex flex-col-reverse lg:flex-row items-start
 // //             justify-between pt-28 md:pt-35 px-4 md:px-16 lg:px-24
 // //            x1:px-32'>
@@ -31,10 +26,7 @@
                  
 // //                    <p onClick={()=> {navigate(`/rooms/${room._id}`); scrollTo(0,
 // //                     0)}}
-
-
-// //                  className='text-gray-800 text-3xl font-playfair cursor-pointer'>{room.hotel.name}</p>
-                 
+// //                  className='text-gray-800 text-3xl font-playfair cursor-pointer'>{room.hotel.name}</p>             
 // //             <div className='flex items-center'>
 // //               <StarRating /> 
 // //               <p className='ml-2'>200+ reviews </p>
@@ -45,13 +37,8 @@
 // //               <span>{room.hotel.address}</span>
 // //             </div>
 
-
-
 // //             </div>
 // //              </div>
-
-
-
 // //                     ))}
 // //               {/* Filters */}
 // //           <div>

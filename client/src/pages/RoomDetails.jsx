@@ -105,22 +105,9 @@
 
 // //        <button type='submit' className='bg-primary hover:bg-primary-dull active:scale-95 transition-all text-white rounded-md max-md:w-full max-md:mt-6 md:px-25 py-3 md:py-4 text-base cursor-pointer'>
 // //          Book Now </button>
-
-
-   
-   
-
-
-
-
-
-
 // //    </div>
-
-
 // //   );
 // // };
-
 // // export default RoomDetails;
 
 //   import React, { useEffect, useState } from 'react';
@@ -235,15 +222,6 @@
 //           </div>
 
 //           <div className='w-px h-15 bg-gray-300/70 max-md:hidden'></div>
-
-         
-
-
-
-
-
-
-
 //           <div className='flex flex-col'>
 //             <label htmlFor='guests' className='font-medium'>Guests</label>
 //             <input
@@ -446,36 +424,11 @@ const RoomDetails = () => {
         <p className='ml-2'>200+ reviews</p>
       </div>
     </div>
-
     <button className='px-6 py-2.5 mt-4 rounded text-white bg-blue-600 hover:bg-yellow-400 transition-all cursor-pointer '> Contact Now  </button>
-
-
   </div>
-
-
-
-
    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
   );
 };
-
 export default RoomDetails;
 

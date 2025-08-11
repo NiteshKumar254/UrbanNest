@@ -1,70 +1,69 @@
-// // GET /api/user/
-
-// export const getUserData = async (req, res) => {
-//     try {
-//         const role = req.user.role;
-//         const recentSearchedCities = req.user.recentSearchedCities;
-//         res.json({ success: true, role, recentSearchedCities });
-//     } catch (error) {
-//         res.json({ success: false, message: error.message });
-//     }
-// }
-
-
-// //store recent searched cities
-// export const storeRecentSearchedCities = async (req, res)=>{
-//     try {
-//         const {recentSearchedCity} = req.body;
-//         const user = await req.user;
-
-//         if(user.recentSearchedCities.length < 3){
-//             user.recentSearchedCities.push(recentSearchedCity)
-//         }else{
-//             user.recentSearchedCities.shift();
-//             user.recentSearchedCities.push(recentSearchedCity)
-//         }
-
-//         await user.save();
-//         res.json({success: true, message: "City added"})
-//     } catch (error) {
-//         res.json({success: false, message: "error.message"})
-//     }
-// };
-
 // GET /api/user/
+
 export const getUserData = async (req, res) => {
     try {
-        if (!req.user) throw new Error("User not found on request");
-
         const role = req.user.role;
         const recentSearchedCities = req.user.recentSearchedCities;
-
         res.json({ success: true, role, recentSearchedCities });
     } catch (error) {
         res.json({ success: false, message: error.message });
     }
-};
+}
 
-
-// POST /api/user/store-recent-search
-export const storeRecentSearchedCities = async (req, res) => {
+//store recent searched cities
+export const storeRecentSearchedCities = async (req, res)=>{
     try {
-        if (!req.user) throw new Error("User not found on request");
+        const {recentSearchedCity} = req.body;
+        const user = await req.user;
 
-        const { recentSearchedCity } = req.body;
-        const user = req.user;
-
-        if (user.recentSearchedCities.length < 3) {
-            user.recentSearchedCities.push(recentSearchedCity);
-        } else {
+        if(user.recentSearchedCities.length < 3){
+            user.recentSearchedCities.push(recentSearchedCity)
+        }else{
             user.recentSearchedCities.shift();
-            user.recentSearchedCities.push(recentSearchedCity);
+            user.recentSearchedCities.push(recentSearchedCity)
         }
 
         await user.save();
-        res.json({ success: true, message: "City added" });
+        res.json({success: true, message: "City added"})
     } catch (error) {
-        res.json({ success: false, message: error.message });
+        res.json({success: false, message: "error.message"})
     }
 };
+
+// GET /api/user/
+// export const getUserData = async (req, res) => {
+//     try {
+//         if (!req.user) throw new Error("User not found on request");
+
+//         const role = req.user.role;
+//         const recentSearchedCities = req.user.recentSearchedCities;
+
+//         res.json({ success: true, role, recentSearchedCities });
+//     } catch (error) {
+//         res.json({ success: false, message: error.message });
+//     }
+// };
+
+
+// // POST /api/user/store-recent-search
+// export const storeRecentSearchedCities = async (req, res) => {
+//     try {
+//         if (!req.user) throw new Error("User not found on request");
+
+//         const { recentSearchedCity } = req.body;
+//         const user = req.user;
+
+//         if (user.recentSearchedCities.length < 3) {
+//             user.recentSearchedCities.push(recentSearchedCity);
+//         } else {
+//             user.recentSearchedCities.shift();
+//             user.recentSearchedCities.push(recentSearchedCity);
+//         }
+
+//         await user.save();
+//         res.json({ success: true, message: "City added" });
+//     } catch (error) {
+//         res.json({ success: false, message: error.message });
+//     }
+// };
 
