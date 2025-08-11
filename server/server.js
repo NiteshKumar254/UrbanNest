@@ -21,7 +21,7 @@ const app=express()
 app.use(cors({
   origin: [
     "http://localhost:5173", // local frontend
-    "https://urban-nest.vercel.app" // your deployed frontend
+    "urban-nest-backend-omega.vercel.app" // your deployed frontend
   ],
   credentials: true
 }));
