@@ -18,13 +18,14 @@ connectCloudinary()
 const app=express()
 
 // app.use(cors()) //Enable Cross-Origin Resource Sharing 
+
 app.use(cors({
-  origin: [
-    "http://localhost:5173", // local frontend
-    "urban-nest-backend-omega.vercel.app" // your deployed frontend
-  ],
-  credentials: true
+  origin: "http://localhost:5173", // your frontend URL during local dev
+  credentials: true                // allow cookies / auth headers
 }));
+
+
+
 
 
     
